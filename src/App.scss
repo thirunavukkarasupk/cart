@@ -5,3 +5,25 @@
 		font-weight: bold;
 	}
 }
+.Container{
+	background-color: white;
+	padding: 1rem;
+	margin: 0.5rem;
+	border-style:groove;
+	border-radius: 0.1rem;
+	border-color: #101110;
+	border-width: 0.1rem;
+}
+.row{
+	display: flex;
+	justify-content: space-between;
+}
+.left{
+	width: 50%;
+	float: left;
+}
+.right{
+	width: 50%;
+	margin-left: 50%;
+}
+
