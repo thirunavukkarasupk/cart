@@ -1,7 +1,7 @@
 
 import { React } from 'react';
 import Basket from './Basket';
-import Total from './Total';
+import Total from './TotalButton';
 
 const Cart = (context) => {
 	const { state: { total }} = context;
