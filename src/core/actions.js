@@ -1,4 +1,5 @@
-/* eslint-disable no-console */
+
+import calculateTotal from '../services/calculateTotal';
 
 const addFruit = ({ state: { cartItems }, data: fruit }) =>
 	({
@@ -15,10 +16,16 @@ const minusFruit = ({ state: { cartItems }, data: { fruit, quantity }}) =>
 		cartItems: { ...cartItems, [fruit]: quantity - 1 },
 	});
 
+const getTotal = (context) =>
+	({
+		total: calculateTotal.getTotal(context),
+	});
+
 const actions = {
 	addFruit,
 	plusFruit,
 	minusFruit,
+	getTotal,
 };
 
 export default actions;

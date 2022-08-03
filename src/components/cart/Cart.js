@@ -1,6 +1,7 @@
 
 import { React } from 'react';
 import Basket from './Basket';
+import Total from './Total';
 
 const Cart = (context) => {
 	const { state: { total }} = context;
@@ -8,7 +9,8 @@ const Cart = (context) => {
 	return <div>
 		<h2>CART</h2><br/>
 		<Basket { ...context }/>
-		<h2>TOTAL:{total}</h2>
+		<Total { ...context }/>
+		<h4>{total}</h4>
 	</div>;
 };
 
