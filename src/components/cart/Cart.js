@@ -1,9 +1,15 @@
-import { React } from 'react';
 
-const Cart = ({ context }) =>
-	<div>
+import { React } from 'react';
+import Basket from './Basket';
+
+const Cart = (context) => {
+	const { state: { total }} = context;
+
+	return <div>
 		<h2>CART</h2><br/>
-		<h2>TOTAL:{context.state.total}</h2>
+		<Basket { ...context }/>
+		<h2>TOTAL:{total}</h2>
 	</div>;
+};
 
 export default Cart;
