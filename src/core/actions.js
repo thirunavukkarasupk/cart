@@ -3,7 +3,7 @@ import calculateTotal from '../services/calculateTotal';
 
 const addFruit = ({ state: { cartItems }, data: fruit }) =>
 	({
-		cartItems: { ...cartItems, [fruit]: cartItems[fruit] + 1 },
+		cartItems: { ...cartItems, [fruit]: (cartItems[fruit] || 0) + 1 },
 	});
 
 const plusFruit = ({ state: { cartItems }, data: { fruit, quantity }}) =>
