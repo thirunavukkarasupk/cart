@@ -1,19 +1,20 @@
-
+import addAFruit from '../services/addAFruit';
 import calculateTotal from '../services/calculateTotal';
+import updateQuantity from '../services/updateQuantity';
 
-const addFruit = ({ state: { cartItems }, data: fruit }) =>
+const addFruit = (context) =>
 	({
-		cartItems: { ...cartItems, [fruit]: (cartItems[fruit] || 0) + 1 },
+		cartItems: addAFruit.addFruit(context),
 	});
 
-const plusFruit = ({ state: { cartItems }, data: { fruit, quantity }}) =>
+const plusFruit = (context) =>
 	({
-		cartItems: { ...cartItems, [fruit]: quantity + 1 },
+		cartItems: updateQuantity.addFruit(context),
 	});
 
-const minusFruit = ({ state: { cartItems }, data: { fruit, quantity }}) =>
+const minusFruit = (context) =>
 	({
-		cartItems: { ...cartItems, [fruit]: quantity - 1 },
+		cartItems: updateQuantity.deleteFruit(context),
 	});
 
 const getTotal = (context) =>

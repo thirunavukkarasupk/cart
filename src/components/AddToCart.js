@@ -1,10 +1,11 @@
 
 import { React } from 'react';
 
-const AddToCart = ({ actions, item }) =>
+const AddToCart = (context) =>
 	<button
 		onClick={ () => {
-			actions.addFruit(item);
+			context.actions.addFruit(context);
+			context.actions.getTotal(context);
 		} }
 	>
 		AddToCart

@@ -1,10 +1,17 @@
 import { React } from 'react';
 
-const PlusButton = ({ actions, data }) =>
-	<button
-		onClick={ () => actions.plusFruit(data) }
-	>
-		+
-	</button>;
+const PlusButton = (context) => {
+	const { actions, data } = context;
+
+	return (
+		<button
+			onClick={ () => {
+				actions.plusFruit(data);
+				actions.getTotal(context);
+			} }
+		>
+			+
+		</button>);
+};
 
 export default PlusButton;
