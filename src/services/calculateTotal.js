@@ -6,7 +6,7 @@ const calculateTotal = {
 		const priceList = map(entries(cartItems), ([item, quantity]) =>
 			calculateTotal.getUnitPrice(fruits, item) * quantity);
 
-		return priceList.reduce((acc, curr) => acc + curr);
+		return priceList.reduce((acc, curr) => acc + curr, 0);
 	},
 	getUnitPrice: (fruits, item) => {
 		const fruitData = fruits.find((fruit) => fruit.item === item);
