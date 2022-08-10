@@ -7,7 +7,7 @@ const PlusButton = (context) => {
 		<button
 			onClick={ () => {
 				actions.plusFruit(data);
-				actions.getTotal(context);
+				actions.getTotal(data);
 			} }
 		>
 			+

@@ -10,7 +10,7 @@ const Products = (context) => {
 				<h4>{fruit.item}</h4><h4>Rs.{fruit.rate}/kg</h4>
 			</div>
 			<div>
-				<AddToCart { ...{ ...context, item: fruit.item } }/>
+				<AddToCart { ...{ ...context, data: fruit } }/>
 			</div>
 		</div>);
 };

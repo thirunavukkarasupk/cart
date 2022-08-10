@@ -7,7 +7,7 @@ const MinusButton = (context) => {
 		<button
 			onClick={ () => {
 				actions.minusFruit(data);
-				actions.getTotal(context);
+				actions.getTotal(data);
 			} }
 		>
 			-
